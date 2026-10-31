@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About Jeanine | Designer" description="About Jeanine White Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -55,10 +55,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<p>officia unde omnis</p>
 				</div>
 			</section>
+			<section>
+				<h2 class="section-title">Clients</h2>
+				<p>Studios and teams, it&apos;s a &#123;fun&#125; mix.</p>
+				<ul>
+					<li>One</li>
+				</ul>
+			</section>
 		</main>
 
 		<ContactCTA />
 	</div>
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@type": "Person",
+		"name": "Jeanine"
+	})} />
 </BaseLayout>
 
 <style>
