@@ -10,7 +10,7 @@ export interface Step {
 export const steps: Step[] = [
 	{
 		title: 'Discovery call',
-		text: 'A 30 minute call about your goals, your customers and the pages that sell today. Notes land in your inbox the same day.',
+		text: 'A 30 minute call about your goals, your customers and the pages that sell today. Notes land in your inbox within the hour.',
 		image: 'assets/stock-2.jpg',
 		alt: 'Notes from a discovery call',
 		href: 'https://calendly.com/',
