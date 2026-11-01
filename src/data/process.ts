@@ -17,8 +17,8 @@ export const steps: Step[] = [
 		cta: 'Book a call',
 	},
 	{
-		title: 'Design sprint',
-		text: 'Two weeks of wireframes and a clickable prototype in Figma, reviewed with your team every Friday.',
+		title: 'Two-week design sprint',
+		text: 'Wireframes and a clickable prototype in Figma, reviewed with your team every Friday, so nothing in the build is a surprise.',
 		image: 'assets/stock-1.jpg',
 		alt: 'Wireframes on a desk',
 		href: 'https://www.figma.com/',
