@@ -7,8 +7,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<main class="wrapper about">
 			<section>
 				<h1>Services</h1>
+				<p class="lede">Design and development for teams that sell online, from the first sketch to the launch.</p>
+			</section>
+			<section>
 				<h2 class="section-title">Design</h2>
-				<p>Sites.</p>
+				<div class="content">
+					<p>
+						Brand systems and sites built on the same tokens, the way <a href="https://www.figma.com/">Figma</a> libraries
+						keep a team in sync. Recent work includes a storefront refresh for a coffee roaster.
+					</p>
+					<img width="1600" height="900" src="/rp-site-astro/assets/stock-1.jpg" alt="Sketches for a storefront" />
+					<h3>Timeline</h3>
+					<p>Two to four weeks, with a review every Friday.</p>
+					<a class="cta-button" href="/rp-site-astro/work/">See the work</a>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Development</h2>
+				<div class="content">
+					<p>
+						Fast static sites on <a href="https://astro.build/">Astro</a>, deployed to
+						<a href="https://pages.github.com/">GitHub Pages</a> or your own host.
+					</p>
+					<ul>
+						<li>Content in Markdown your team can edit</li>
+						<li>Lighthouse scores above 95</li>
+						<li>Analytics without cookies</li>
+					</ul>
+					<h3>Timeline</h3>
+					<p>Four to eight weeks, depending on the content.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Support</h2>
+				<div class="content">
+					<p>A monthly plan for fixes and small features, billed by the hour.</p>
+					<img width="1600" height="900" src="/rp-site-astro/assets/stock-3.jpg" alt="A desk with a laptop" />
+					<a class="cta-button" href="mailto:hello@e2e.test">Ask for a quote</a>
+				</div>
 			</section>
 		</main>
 	</div>
@@ -25,6 +61,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
+		max-width: 100%;
+		height: auto;
 	}
 
 	section {
@@ -42,17 +80,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	.content {
 		grid-column: 2 / 4;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
+		text-decoration: 1px solid underline;
 		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
 	}
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
+	.cta-button {
+		align-self: flex-start;
+		padding: 0.56em 2em;
+		border-radius: 999rem;
+		color: var(--accent-text-over);
+		background: var(--gradient-accent-orange);
+		box-shadow: var(--shadow-md);
+		text-decoration: none !important;
 	}
 
 	@media (min-width: 50em) {
