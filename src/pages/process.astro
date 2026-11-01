@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { steps } from '../data/process';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Process | Jeanine" description="How a website project with Jeanine runs, from the first call to the launch.">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<section>
+				<h1>How a project runs</h1>
+				<p class="lede">Three steps, about six weeks, and one person you talk to the whole way through.</p>
+			</section>
+			{
+				steps.map((step) => (
+					<section>
+						<h2 class="section-title">{step.title}</h2>
+						<div class="content">
+							<p>{step.text}</p>
+							<img width="1600" height="900" src={`${base}/${step.image}`} alt={step.alt} />
+							<a class="cta-button" href={step.href}>
+								{step.cta}
+							</a>
+						</div>
+					</section>
+				))
+			}
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+		max-width: 100%;
+		height: auto;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.cta-button {
+		align-self: flex-start;
+		padding: 0.56em 2em;
+		border-radius: 999rem;
+		color: var(--accent-text-over);
+		background: var(--gradient-accent-orange);
+		box-shadow: var(--shadow-md);
+		text-decoration: none;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
