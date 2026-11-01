@@ -2,28 +2,32 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Design and development services | Jeanine" description="Brand design and fast Astro sites for teams that sell online, from the first sketch to the launch.">
+<BaseLayout title="Services | Jeanine" description="What I do.">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<section>
-				<h1>Design and development services</h1>
+				<h1>Services</h1>
 				<p class="lede">Design and development for teams that sell online, from the first sketch to the launch.</p>
 			</section>
 			<section>
 				<h2 class="section-title">Design</h2>
 				<div class="content">
-					<p>Brand systems and sites that share one set of tokens, the way <a href="https://www.figma.com/">Figma</a> libraries keep a team in sync. Colors, type and spacing are decided once and used everywhere, so the site and the decks never drift apart.</p>
-					<p>The latest is a storefront refresh for a coffee roaster in Oakland: a new product page, a subscription flow and a style guide their team now edits on its own.</p>
+					<p>
+						Brand systems and sites built on the same tokens, the way <a href="https://www.figma.com/">Figma</a> libraries
+						keep a team in sync. Recent work includes a storefront refresh for a coffee roaster.
+					</p>
 					<img width="1600" height="900" src="/rp-site-astro/assets/stock-1.jpg" alt="Sketches for a storefront" />
 					<h3>Timeline</h3>
-					<p>Two to four weeks, with a review every Friday and notes the same day.</p>
+					<p>Two to four weeks, with a review every Friday.</p>
 					<a class="cta-button" href="/rp-site-astro/work/">See the work</a>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Development</h2>
 				<div class="content">
-					<p>Fast static sites on <a href="https://astro.build/">Astro</a>, deployed to <a href="https://pages.github.com/">GitHub Pages</a> or your own host, with every page under one second on a phone.</p>
+					<p>
+						Fast static sites on <a href="https://astro.build/">Astro</a>, deployed to <a href="https://pages.github.com/">GitHub Pages</a> or your own host.
+					</p>
 					<ul>
 						<li>Content in Markdown your team can edit</li>
 						<li>Lighthouse scores above 95</li>
@@ -34,13 +38,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Workshops</h2>
-				<div class="content">
-					<p>A half-day session with your team on content models and page structure. We map the pages you have, the ones you need and who keeps each one current.</p>
-					<p>Every workshop ends with a written plan and a starter repository, based on the <a href="https://docs.astro.build/">Astro docs</a>, that your developers can build on the next morning.</p>
-				</div>
-			</section>
-			<section>
 				<h2 class="section-title">Support</h2>
 				<div class="content">
 					<p>A monthly plan for fixes and small features, billed by the hour.</p>
@@ -48,30 +45,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<a class="cta-button" href="mailto:hello@e2e.test">Ask for a quote</a>
 				</div>
 			</section>
-			<section>
-				<div class="content">
-					<p>Read <a href="https://nerai-labs.github.io/rp-site-astro/about/">how I work</a> before we talk.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Questions</h2>
-				<div class="content">
-					<h3>Do you work with agencies?</h3>
-					<p>Yes. I work as a white label partner on design and builds, and your agency keeps the client relationship.</p>
-					<h3>Where is the site hosted?</h3>
-					<p>On GitHub Pages, Netlify or your own host. You own the repository and the domain from day one.</p>
-					<h3>Can my team edit the site after launch?</h3>
-					<p>Yes. Pages are Markdown files, and the handover includes a short guide for your editors.</p>
-				</div>
-			</section>
 		</main>
 	</div>
-	<script type="application/ld+json" set:html={JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "ProfessionalService",
-		"name": "Jeanine White Design and Development",
-		"areaServed": "Worldwide"
-	})} />
 </BaseLayout>
 
 <style>
