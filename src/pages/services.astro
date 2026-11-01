@@ -26,8 +26,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<h2 class="section-title">Development</h2>
 				<div class="content">
 					<p>
-						Fast static sites on <a href="https://astro.build/">Astro</a>, deployed to
-						<a href="https://pages.github.com/">GitHub Pages</a> or your own host.
+						Fast static sites on <a href="https://astro.build/">Astro</a>, deployed to <a href="https://pages.github.com/">GitHub Pages</a> or your own host.
 					</p>
 					<ul>
 						<li>Content in Markdown your team can edit</li>
@@ -83,6 +82,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+	}
+
+	.content h3 {
+		font-size: var(--text-lg);
 	}
 
 	.content :global(a) {
