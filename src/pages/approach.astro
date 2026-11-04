@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import principles from '../data/approach.json';
+---
+
+<BaseLayout title="Approach | Jeanine" description="The three principles behind every website project Jeanine takes on.">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<section>
+				<h1>How I approach a website</h1>
+				<p class="lede">Three principles that keep a project focused on the customers it is for.</p>
+			</section>
+			{
+				principles.map((item) => (
+					<section>
+						<h2 class="section-title">{item.title}</h2>
+						<div class="content">
+							<p>{item.text}</p>
+						</div>
+					</section>
+				))
+			}
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+</style>
