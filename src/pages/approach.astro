@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import principles from '../data/approach.json';
 ---
 
-<BaseLayout title="Website Design Process | Jeanine White" description="See how Jeanine approaches your website: customer research, copy before design, and a first version live in four weeks, followed by page-by-page improvements.">
+<BaseLayout title="Approach | Jeanine" description="The three principles behind every website project Jeanine takes on.">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<section>
@@ -22,24 +22,6 @@ import principles from '../data/approach.json';
 			}
 		</main>
 	</div>
-	<script type="application/ld+json" set:html={JSON.stringify({
-		"@type": "BreadcrumbList",
-		"@context": "https://schema.org",
-		"itemListElement": [
-			{
-				"item": "https://nerai-labs.github.io/rp-site-astro/",
-				"name": "Home",
-				"@type": "ListItem",
-				"position": 1
-			},
-			{
-				"item": "https://nerai-labs.github.io/rp-site-astro/approach",
-				"name": "Approach",
-				"@type": "ListItem",
-				"position": 2
-			}
-		]
-	}).replace(/</g, "\\u003c")} />
 </BaseLayout>
 
 <style>
